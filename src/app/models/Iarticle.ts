@@ -1,10 +1,13 @@
+import { Form, FormControl } from "@angular/forms";
+
 export interface IArticle {
+    quantityControl: FormControl;
     Name: string,
     'Closet Image': string,
     'Storage Image': string,
     Variation: string,
     DIY: string,
-    Buy: string,
+    Buy: number,
     Sell: number,
     'HHA Base Points': number,
     'Color 1': string,
@@ -26,5 +29,5 @@ export interface IArticle {
     Filename: string,
     'ClothGroup ID': number,
     'Internal ID': number,
-    'UniqueEntry ID': string
+    'UniqueEntry ID': number,
 }

@@ -1,5 +1,14 @@
-<div *ngFor = "let articles of articles">
-    <h2>{{articles.Name}}</h2>
-    <img [src]="articles['Closet Image']" class="card-img-top" alt="..." />
-
-</div>
+<div class="card">
+    <div *ngFor="let article of articles">
+      <div class="card-body">
+        <div></div>
+        <h5 class="card-title">{{ article.Name }}</h5>
+        <img src="{{ article['Closet Image'] }}">
+        <p class="card-text">{{ article['Seasonal Availability'] }}</p>
+        <p class="card-text">{{ article.Buy }} $$</p>
+        <input type="number" [formControl]="article.quantityControl" min="0" max="200">
+        <button (click)="addToCard(article, article.quantityControl)">Ajouter au panier</button>
+      </div>
+    </div>
+  </div>
+  
